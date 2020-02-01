@@ -16,15 +16,16 @@ public class LanterneAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A) && !isLighting)
+        if (Input.GetKeyDown(KeyCode.A) && !isLighting)
         {
             myAnims.SetTrigger("ActiveMouvementLight");
             isLighting = true;
         }
-        if (Input.GetKeyDown(KeyCode.A) && isLighting == true)
+        if (Input.GetKeyUp(KeyCode.A) && isLighting == true)
         {
-            myAnims.SetTrigger("StayLight");
+            myAnims.SetTrigger("DeactivateLight");
         }
+
     }
 
     public void StopLighting()
