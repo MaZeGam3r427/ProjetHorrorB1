@@ -8,11 +8,12 @@ public class CaseManager : MonoBehaviour
 {
     public TextMeshProUGUI InfoText;
     public GameObject Case;
+    public string obj;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        obj = GetComponent<Image>().sprite.name;
     }
 
     // Update is called once per frame
@@ -26,11 +27,18 @@ public class CaseManager : MonoBehaviour
 
         if(Case.name == "Case 1")
         {
-            InfoText.text = "Case n°1";
+
+            if(obj == "Wooden_Plank")
+            {
+                InfoText.text = "Des planches de bois... Mais à quoi peuvent elle bien servir ?";
+            }
         }
         if (Case.name == "Case 2")
         {
-            InfoText.text = "Case n°2";
+            if(obj == "Hammer")
+            {
+                InfoText.text = "Un vieux marteau";
+            }
         }
         if (Case.name == "Case 3")
         {
