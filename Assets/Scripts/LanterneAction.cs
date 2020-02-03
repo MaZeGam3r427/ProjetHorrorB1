@@ -32,4 +32,9 @@ public class LanterneAction : MonoBehaviour
     {
         isLighting = false;
     }
+
+    /*public void StartLighting()
+    {
+        isLighting = true;
+    }*/
 }
