@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 7405351267925773004}
   - component: {fileID: 7405351267925772995}
   - component: {fileID: 1051264870}
+  - component: {fileID: 359457415}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -166,6 +167,20 @@ MonoBehaviour:
   controller: {fileID: 7405351267925772995}
   speed: 8
   gravity: -9.81
+--- !u!136 &359457415
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405351267925773005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.61700606
+  m_Height: 1.9979887
+  m_Direction: 1
+  m_Center: {x: 1.5094815e-16, y: -0.00059247017, z: -0.041872025}
 --- !u!1 &7405351268927902929
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +192,6 @@ GameObject:
   - component: {fileID: 7405351268927902933}
   - component: {fileID: 7405351268927902934}
   - component: {fileID: 7405351268927902935}
-  - component: {fileID: 7405351268927902928}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -193,7 +207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7405351268927902929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.72, z: 0}
+  m_LocalPosition: {x: -0, y: 0.331, z: -0.053}
   m_LocalScale: {x: 0.47761, y: 0.47761, z: 0.47761}
   m_Children: []
   m_Father: {fileID: 7405351267925773004}
@@ -245,20 +259,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &7405351268927902928
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7405351268927902929}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &578781018
 PrefabInstance:
   m_ObjectHideFlags: 0
