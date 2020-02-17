@@ -8,9 +8,9 @@ public class MenuManager : MonoBehaviour
     public static bool InventoryOpen = false;
     public GameObject InventoryUI;
 
-    [Header("PauseMenu")]
+    /*[Header("PauseMenu")]
     public static bool PauseOpen = false;
-    public GameObject MenuPauseUI;
+    public GameObject MenuPauseUI;*/
 
     // Start is called before the first frame update
     void Start()
@@ -49,11 +49,11 @@ public class MenuManager : MonoBehaviour
 
     public void Resume()
     {
-        MenuPauseUI.SetActive(false);
+        //MenuPauseUI.SetActive(false);
         InventoryUI.SetActive(false);
         Time.timeScale = 1f;
         InventoryOpen = false;
-        PauseOpen = false;
+        //PauseOpen = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 

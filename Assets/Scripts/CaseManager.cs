@@ -8,7 +8,7 @@ public class CaseManager : MonoBehaviour
 {
     public TextMeshProUGUI InfoText;
     public GameObject Case;
-    public string obj;
+    private string obj;
 
     // Start is called before the first frame update
     void Start()
