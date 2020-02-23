@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LanterneAction : MonoBehaviour
 {
-    private Animator myAnims;
+    public Animator myAnims;
     private bool isLighting = false;
 
     // Start is called before the first frame update
