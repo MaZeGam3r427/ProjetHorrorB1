@@ -24,17 +24,8 @@ public class LanterneAction : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.A) && isLighting == true)
         {
             myAnims.SetTrigger("DeactivateLight");
+            isLighting = false;
         }
 
     }
-
-    public void StopLighting()
-    {
-        isLighting = false;
-    }
-
-    /*public void StartLighting()
-    {
-        isLighting = true;
-    }*/
 }
