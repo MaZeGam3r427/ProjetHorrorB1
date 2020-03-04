@@ -26,6 +26,5 @@ public class LanterneAction : MonoBehaviour
             myAnims.SetTrigger("DeactivateLight");
             isLighting = false;
         }
-
     }
 }

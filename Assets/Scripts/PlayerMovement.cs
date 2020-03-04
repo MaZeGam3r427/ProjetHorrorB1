@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    private bool touchingCollider = false;
+
+    public Animator Myanim;
+
+
     public CharacterController controller;
 
     public float speed = 12f;
@@ -12,7 +17,12 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        Myanim.SetBool("Climbing", false);
+    }
+
+
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
@@ -25,13 +35,33 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-    }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
+
+        if (Input.GetKeyDown(KeyCode.F))
         {
-
+            if (touchingCollider == true)
+            {
+                Myanim.SetBool("Climbing", true);
+            }
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Obstacle")
+        {
+            touchingCollider = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Obstacle")
+        {
+            touchingCollider = false;
+        }
+    }
+
+   
+
 }
