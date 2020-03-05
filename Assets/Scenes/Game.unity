@@ -8689,7 +8689,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18098
+  m_Name: pb_Mesh18092
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9669,7 +9669,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17408
+  m_Name: pb_Mesh17404
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9832,7 +9832,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17362
+  m_Name: pb_Mesh17358
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17850,7 +17850,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17566
+  m_Name: pb_Mesh17564
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18017,7 +18017,7 @@ PrefabInstance:
     - target: {fileID: 7405351267925773004, guid: 9682ec6ab09a13745b562dff4ec746c6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.58
+      value: 4.745
       objectReference: {fileID: 0}
     - target: {fileID: 7405351267925773004, guid: 9682ec6ab09a13745b562dff4ec746c6,
         type: 3}
@@ -18027,7 +18027,7 @@ PrefabInstance:
     - target: {fileID: 7405351267925773004, guid: 9682ec6ab09a13745b562dff4ec746c6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.56
+      value: -4.758
       objectReference: {fileID: 0}
     - target: {fileID: 7405351267925773004, guid: 9682ec6ab09a13745b562dff4ec746c6,
         type: 3}
@@ -18073,6 +18073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405351268927902935, guid: 9682ec6ab09a13745b562dff4ec746c6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9682ec6ab09a13745b562dff4ec746c6, type: 3}
@@ -18757,8 +18762,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.4324074, y: 2.9281397, z: 6.1138515}
-  m_Center: {x: 0.67434895, y: 0.53772545, z: -0.031525154}
+  m_Size: {x: 3.6398702, y: 2.9281397, z: 1.6839775}
+  m_Center: {x: 0.65276575, y: 0.53772545, z: 0.03596131}
 --- !u!33 &901043604
 MeshFilter:
   m_ObjectHideFlags: 0

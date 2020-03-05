@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        Myanim.SetBool("Climbing", false);
     }
 
 
@@ -41,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (touchingCollider == true)
             {
-                Myanim.SetBool("Climbing", true);
+                Myanim.SetTrigger("Climbing");
             }
         }
     }
@@ -61,7 +60,5 @@ public class PlayerMovement : MonoBehaviour
             touchingCollider = false;
         }
     }
-
-   
 
 }
