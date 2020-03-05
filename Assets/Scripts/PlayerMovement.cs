@@ -53,12 +53,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
+    /*void OnTriggerExit(Collider other)
     {
         if (other.tag == "Obstacle")
         {
             touchingCollider = false;
         }
+    }*/
+
+    public void TouchingColliderOff()
+    {
+        touchingCollider = false;
     }
 
 }
