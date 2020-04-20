@@ -7,54 +7,112 @@ using UnityEngine.UI;
 public class CaseManager : MonoBehaviour
 {
     public TextMeshProUGUI InfoText;
-    public GameObject Case;
-    private string obj;
 
-    // Start is called before the first frame update
-    void Start()
+    public Sprite SprHammer;
+    public Sprite SprPlanks;
+    public Sprite SprLadder;
+    public Sprite SprKeyRemise;
+    public Sprite SprKeyLabo;
+    public Sprite MunitionsLampe;
+
+    public bool Hammer = false;
+    public bool Planks = false;
+    public bool Ladder = false;
+    public bool KeyRemise = false;
+    public bool KeyLabo = false;
+    public bool MunLampe = false;
+
+    public GameObject CaseUne;
+    public GameObject CaseDeux;
+    public GameObject CaseTrois;
+    public GameObject CaseQuatre;
+    public GameObject CaseCinq;
+    public GameObject CaseSix;
+
+
+
+
+    private void Update()
     {
-        obj = GetComponent<Image>().sprite.name;
+        //Si un item a été activé par le biais du script ItemPickup,
+        //alors on change le sprite de l'inventaire vide par un sprite approprié
+        if (Hammer == true)
+        {
+            CaseUne.GetComponent<Image>().sprite = SprHammer;
+        }
+
+        if (Planks == true)
+        {
+            //CaseDeux.GetComponent<Image>().sprite = ;
+        }
+
+        if (Ladder == true)
+        {
+            //CaseTrois.GetComponent<Image>().sprite = ;
+        }
+
+        if (KeyRemise == true)
+        {
+            //CaseQuatre.GetComponent<Image>().sprite = ;
+        }
+
+        if (KeyLabo == true)
+        {
+            //CaseCinq.GetComponent<Image>().sprite = ;
+        }
+
+        if (MunLampe == true)
+        {
+            //CaseSix.GetComponent<Image>().sprite = ;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void CaseMarteau()
     {
-        
+        if (Hammer == true)
+        {
+            InfoText.text = "Un simple marteau.";
+        }
     }
 
-    public void DisplayInformations()
+    public void CasePlanches()
     {
+        if (Planks == true)
+        {
+            InfoText.text = "Des planches en bois.";
+        }
+    }
 
-        if(Case.name == "Case 1")
+    public void CaseEchelle()
+    {
+        if (Ladder == true)
         {
+            InfoText.text = "Une échelle ! Elle pourra surement me servir pour monter !";
+        }
+    }
 
-            if(obj == "Wooden_Plank")
-            {
-                InfoText.text = "Des planches de bois... Mais à quoi peuvent elle bien servir ?";
-            }
-        }
-        if (Case.name == "Case 2")
+    public void CaseCléRemise()
+    {
+        if (KeyRemise == true)
         {
-            if(obj == "Hammer")
-            {
-                InfoText.text = "Un vieux marteau";
-            }
+            InfoText.text = "Une clé pour la remise au rez de chaussé.";
         }
-        if (Case.name == "Case 3")
+    }
+
+    public void CaseCléLabo()
+    {
+        if (KeyLabo == true)
         {
-            InfoText.text = "Case n°3";
+            InfoText.text = "Une clé pour le laboratoire du second étage.";
         }
-        if (Case.name == "Case 4")
+    }
+
+    public void CaseMunitionsLampe()
+    {
+        if (MunLampe == true)
         {
-            InfoText.text = "Case n°4";
-        }
-        if (Case.name == "Case 5")
-        {
-            InfoText.text = "Case n°5";
-        }
-        if (Case.name == "Case 6")
-        {
-            InfoText.text = "Case n°6";
+            //recharger la barre de munition
         }
     }
 }
