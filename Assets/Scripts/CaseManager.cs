@@ -29,8 +29,7 @@ public class CaseManager : MonoBehaviour
     public GameObject CaseCinq;
     public GameObject CaseSix;
 
-
-
+    
 
     private void Update()
     {
@@ -39,6 +38,7 @@ public class CaseManager : MonoBehaviour
         if (Hammer == true)
         {
             CaseUne.GetComponent<Image>().sprite = SprHammer;
+            CaseUne.GetComponent<Image>().color = new Color(255f, 255f, 255f, 255f);
         }
 
         if (Planks == true)

@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Fire
+  - Hammer
+  - Planks
+  - KeyRemise
+  - KeyLabo
+  - MunLampe
+  - Etabli
   layers:
   - Default
   - TransparentFX
