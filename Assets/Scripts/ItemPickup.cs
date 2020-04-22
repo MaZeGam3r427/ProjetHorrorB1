@@ -17,42 +17,50 @@ public class ItemPickup : MonoBehaviour
         if (other.tag == "Hammer")
         {
             CaseManager.Hammer = true;
-            other.enabled = false;
+            other.gameObject.SetActive(false);
         }
 
         if (other.tag == "Planks")
         {
             CaseManager.Planks = true;
-            other.enabled = false;
+            other.gameObject.SetActive(false);
         }
 
         if (other.tag == "Etabli")
         {
-            TextDisplaying.EtabliNoRessource = true;
+            if (CaseManager.Hammer == false || CaseManager.Planks == false)
+            {
+                TextDisplaying.EtabliNoRessource = true;
+            }
+            
+            if (CaseManager.Hammer == true && CaseManager.Planks == true)
+            {
+                TextDisplaying.EtabliRessource = true;
+            }
         }
 
         if (other.tag == "Ladder")
         {
             CaseManager.Ladder = true;
-            other.enabled = false;
+            other.gameObject.SetActive(false);
         }
 
         if (other.tag == "KeyRemise")
         {
             CaseManager.KeyRemise = true;
-            other.enabled = false;
+            other.gameObject.SetActive(false);
         }
 
         if (other.tag == "KeyLabo")
         {
             CaseManager.KeyLabo = true;
-            other.enabled = false;
+            other.gameObject.SetActive(false);
         }
 
         if(other.tag == "MunLampe")
         {
             CaseManager.MunLampe = true;
-            other.enabled = false;
+            other.gameObject.SetActive(false);
         }
     }
 }
