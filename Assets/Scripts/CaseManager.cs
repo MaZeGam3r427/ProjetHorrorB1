@@ -15,12 +15,24 @@ public class CaseManager : MonoBehaviour
     public Sprite SprKeyLabo;
     public Sprite MunitionsLampe;
 
+    public Sprite SprHammerCheck;
+    public Sprite SprPlanksCheck;
+    public Sprite SprLadderCheck;
+    public Sprite SprKeyRemiseCheck;
+    public Sprite SprKeyLaboCheck;
+
     public bool Hammer = false;
     public bool Planks = false;
     public bool Ladder = false;
     public bool KeyRemise = false;
     public bool KeyLabo = false;
     public bool MunLampe = false;
+
+    public bool HammerCheck = false;
+    public bool PlanksCheck = false;
+    public bool LadderCheck = false;
+    public bool KeyRemiseCheck = false;
+    public bool KeyLaboCheck = false;
 
     public GameObject CaseUne;
     public GameObject CaseDeux;
@@ -43,12 +55,14 @@ public class CaseManager : MonoBehaviour
 
         if (Planks == true)
         {
-            //CaseDeux.GetComponent<Image>().sprite = ;
+            CaseDeux.GetComponent<Image>().sprite = SprPlanks;
+            CaseDeux.GetComponent<Image>().color = new Color(255f, 255f, 255f, 255f);
         }
 
         if (Ladder == true)
         {
-            //CaseTrois.GetComponent<Image>().sprite = ;
+            CaseTrois.GetComponent<Image>().sprite = SprLadder;
+            CaseTrois.GetComponent<Image>().color = new Color(255f, 255f, 255f, 255f);
         }
 
         if (KeyRemise == true)
@@ -64,6 +78,17 @@ public class CaseManager : MonoBehaviour
         if (MunLampe == true)
         {
             //CaseSix.GetComponent<Image>().sprite = ;
+        }
+
+        //Quand les objets sont utilisés ils sont checked (sprite)
+        if(HammerCheck == true)
+        {
+            CaseUne.GetComponent<Image>().sprite = SprHammerCheck;
+        }
+
+        if(PlanksCheck == true)
+        {
+            CaseDeux.GetComponent<Image>().sprite = SprPlanksCheck;
         }
     }
 
